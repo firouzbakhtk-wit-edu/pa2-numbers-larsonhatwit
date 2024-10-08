@@ -11,17 +11,19 @@ public class PA2b {
 		double a = input.nextDouble();
 		double b = input.nextDouble();
 		double c = input.nextDouble();
-		double d = Math.sqrt(b) - (4*a*c);
+		double d = Math.pow(b,2) - (4*a*c);
 		
 		if (d < 0) {
-			System.out.printf("Roots: imaginary\n");
+			System.out.printf("Roots: imaginary%n");
 		}
 		else if (d == 0) {
 			double root = (-1*b) / (2*a);
-			System.out.printf("Root: %.2f\n", root);
+			System.out.printf("Root: %.2f%n", root);
 		}
 		else {
-			
+			double root_1 = (-1*b + Math.sqrt(d)) / (2*a);
+			double root_2 = (-1*b - Math.sqrt(d)) / (2*a);
+			System.out.printf("Roots: %.2f, %.2f%n", root_2, root_1);
 		}
 	}
 
