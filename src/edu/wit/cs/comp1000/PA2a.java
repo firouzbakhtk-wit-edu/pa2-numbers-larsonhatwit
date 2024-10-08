@@ -15,7 +15,7 @@ public class PA2a {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.printf("Enter five whole number: ");
+		System.out.printf("Enter five whole numbers: ");
 		
 		// Gets inputs of 5 numbers from user and adds to total count variable
 		int num_1 = input.nextInt();
@@ -74,36 +74,50 @@ public class PA2a {
 			neg_amount++;
 		}
 		if (pos_amount == 1) {
-		System.out.printf("The sum of the %d positive number: %d\n", pos_amount, pos_count);
+		System.out.printf("The sum of the %d positive number: %d%n", pos_amount, pos_count);
 	}
 		else {
-			System.out.printf("The sum of the %d positive numbers: %d\n", pos_amount, pos_count);
+			System.out.printf("The sum of the %d positive numbers: %d%n", pos_amount, pos_count);
 		}
 		if (neg_amount == 1) {
-			System.out.printf("The sum of the %d non-positive number: %d\n", neg_amount, neg_count);
+			System.out.printf("The sum of the %d non-positive number: %d%n", neg_amount, neg_count);
 		}
 		else {
-			System.out.printf("The sum of the %d non-positive numbers: %d\n", neg_amount, neg_count);
+			System.out.printf("The sum of the %d non-positive numbers: %d%n", neg_amount, neg_count);
 			}
 		
-		System.out.printf("The sum of the 5 numbers: %d\n", total_count);
-		double pos_average = pos_count/pos_amount;
-		double neg_average = neg_count/neg_amount;
+		double pos_average;
+		double neg_average;
+		
+		System.out.printf("The sum of the 5 numbers: %d%n", total_count);
+		if (pos_amount == 0) {
+			pos_average = 0.00;
+		}
+		else {
+			pos_average = (pos_count/1.0)/pos_amount;
+		}
+		if (neg_amount == 0) {
+			neg_average = 0.00;
+		}
+		else {
+			neg_average = (neg_count/1.0)/neg_amount;
+		}
+		
 		double total_average = total_count/5.0;
 		
 		if (pos_amount == 1) {
-		System.out.printf("The average of the %d positive number: %.2f\n", pos_amount, pos_average);
+		System.out.printf("The average of the %d positive number: %.2f%n", pos_amount, pos_average);
 		}
 		else {
-		System.out.printf("The average of the %d positive numbers: %.2f\n", pos_amount, pos_average);
+		System.out.printf("The average of the %d positive numbers: %.2f%n", pos_amount, pos_average);
 		}
 		if (neg_amount == 1) {
-			System.out.printf("The average of the %d non-positive number: %.2f\n", neg_amount, neg_average);
+			System.out.printf("The average of the %d non-positive number: %.2f%n", neg_amount, neg_average);
 			}
 			else {
-			System.out.printf("The average of the %d non-positive numbers: %.2f\n", neg_amount, neg_average);
+			System.out.printf("The average of the %d non-positive numbers: %.2f%n", neg_amount, neg_average);
 	}
-		System.out.printf("The average of the 5 numbers: %.2f\n", total_average);
+		System.out.printf("The average of the 5 numbers: %.2f%n", total_average);
 		
 }
 }
