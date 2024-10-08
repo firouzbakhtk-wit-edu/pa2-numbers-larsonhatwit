@@ -2,7 +2,9 @@ package edu.wit.cs.comp1000;
 import java.util.Scanner;
 // TODO: document this class
 public class PA2a {
-
+/**
+ * takes 5 numbers and calculates the sum and average of all numbers, positive, and negative ones.
+ */
 	// TODO: document this function
 	public static void main(String[] args) {
 		// TODO: write your code here
@@ -17,7 +19,9 @@ public class PA2a {
 		
 		System.out.printf("Enter five whole numbers: ");
 		
-		// Gets inputs of 5 numbers from user and adds to total count variable
+		/** Gets inputs of 5 numbers from user and adds to total count variable
+		 * 
+		 */
 		int num_1 = input.nextInt();
 		total_count = total_count + num_1;
 		int num_2 = input.nextInt();
@@ -28,7 +32,9 @@ public class PA2a {
 		total_count = total_count + num_4;
 		int num_5 = input.nextInt();
 		total_count = total_count + num_5;
-		// check if pos or neg and adds to count and amount
+		/** check if pos or neg and adds to count and amount
+		 * 
+		 */
 		if (num_1 > 0) {
 			pos_count = pos_count + num_1;
 			pos_amount++;
@@ -73,6 +79,9 @@ public class PA2a {
 			neg_count = neg_count + num_5;
 			neg_amount++;
 		}
+		/**
+		 * outputs the sum of the positive and non positive numbers
+		 */
 		if (pos_amount == 1) {
 		System.out.printf("The sum of the %d positive number: %d%n", pos_amount, pos_count);
 	}
@@ -88,7 +97,9 @@ public class PA2a {
 		
 		double pos_average;
 		double neg_average;
-		
+		/**
+		 * outputs sum of all numbers then checks if denominator would be 0 
+		 */
 		System.out.printf("The sum of the 5 numbers: %d%n", total_count);
 		if (pos_amount == 0) {
 			pos_average = 0.00;
@@ -104,7 +115,9 @@ public class PA2a {
 		}
 		
 		double total_average = total_count/5.0;
-		
+		/**
+		 * Outputs average of positive, non-positive, and all numbers
+		 */
 		if (pos_amount == 1) {
 		System.out.printf("The average of the %d positive number: %.2f%n", pos_amount, pos_average);
 		}

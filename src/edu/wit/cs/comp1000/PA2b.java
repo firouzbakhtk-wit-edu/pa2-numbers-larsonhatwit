@@ -2,17 +2,27 @@ package edu.wit.cs.comp1000;
 import java.util.Scanner;
 // TODO: document this class
 public class PA2b {
-
+/** Solves the quadratic equation
+ * 
+ * 
+ * 
+ */
 	// TODO: document this function
+	
 	public static void main(String[] args) {
 		// TODO: write your code here
+		/**
+		 * Asks the user to enter values for a b and c and calculates the discriminate
+		 */
 		Scanner input = new Scanner(System.in);
 		System.out.printf("Enter a b c: ");
 		double a = input.nextDouble();
 		double b = input.nextDouble();
 		double c = input.nextDouble();
 		double d = Math.pow(b,2) - (4*a*c);
-		
+		/**
+		 * prints the roots depending on if the discriminate is negative, positive, or 0
+		 */
 		if (d < 0) {
 			System.out.printf("Roots: imaginary%n");
 		}
